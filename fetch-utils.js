@@ -10,7 +10,7 @@ export function getUser() {
 
 export async function getFamilies() {
     // fetch all families and their bunnies
-    const response = await client.from('workshops').select('*, participants(*)');
+    const response = await client.from('loving_families').select('*, fuzzy_bunnies(*)');
     if (response.error){
         console.error(response.error.message);
     } else {
