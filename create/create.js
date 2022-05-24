@@ -5,13 +5,15 @@ const logoutButton = document.getElementById('logout');
 
 form.addEventListener('submit', async (e) => {
     // prevent default
-    e.preventDefault();
     // get the name and family id from the form
-    const form = new FormData(form);
     // use createBunny to create a bunny with this name and family id
-    await createBunny ({
-        name: form.get('name'),
-        family_id: form.get('family_id'),
+    e.preventDefault();
+    const bunnyForm = new FormData(form);
+
+    await createBunny({ 
+        name: bunnyForm.get('bunny-name'),
+        
+        family_id: bunnyForm.get('family-id'),
     });
     form.reset();
 });

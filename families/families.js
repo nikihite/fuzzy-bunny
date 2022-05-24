@@ -22,8 +22,8 @@ async function displayFamilies() {
         const nameEl = document.createElement('h3');
         nameEl.textContent = family.name;
 
-        const bunnyEl = document.createElement('div');
-        bunnyEl.classList.add('bunnies');
+        const bunniesEl = document.createElement('div');
+        bunniesEl.classList.add('bunnies');
 
         for (let bunny of family.fuzzy_bunnies) {
             const bunnyEl = document.createElement('div');
@@ -39,7 +39,7 @@ async function displayFamilies() {
         familyEl.append(bunniesEl, nameEl);
         familiesEl.append(familyEl);
     }
-    displayFamilies();
+    //displayFamilies();
         // create three elements for each family, one for the whole family, one to hold the name, and one to hold the bunnies
         // your HTML Element should look like this:
         // <div class="family">
@@ -60,6 +60,7 @@ async function displayFamilies() {
     // append the bunniesEl and nameEl to the familyEl
 
     // append the familyEl to the familiesEl
+
 
 window.addEventListener('load', async () => {
     const families = await getFamilies();

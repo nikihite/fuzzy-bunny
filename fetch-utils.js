@@ -26,9 +26,9 @@ export async function deleteBunny(id) {
 
 export async function createBunny(bunny) {
     // create a bunny using the bunny argument
-
+    const response = await client.from('fuzzy_bunnies').insert({ name: bunny.name, family_id: bunny.family_id });
     return checkError(response);
-}
+} 
 
 // MARTHA STEWART (PRE-MADE) FUNCTIONS
 
