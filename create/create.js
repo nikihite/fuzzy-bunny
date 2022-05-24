@@ -21,7 +21,7 @@ window.addEventListener('load', async () => {
     // grab the select HTML element from the DOM
     const select = document.querySelector('select');
     // go get the families from supabase
-    const families = await 
+    const families = await getFamilies();
     // for each family
     for (let family of families) {
         const option = document.createElement('option');
