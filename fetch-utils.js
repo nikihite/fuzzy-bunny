@@ -10,8 +10,12 @@ export function getUser() {
 
 export async function getFamilies() {
     // fetch all families and their bunnies
-
-    return checkError(response);
+    const response = await client.from('workshops').select('*, participants(*)');
+    if (response.error){
+        console.error(response.error.message);
+    } else {
+        return checkError(response);
+    }
 }
 
 export async function deleteBunny(id) {
