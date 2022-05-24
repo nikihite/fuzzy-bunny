@@ -2,7 +2,6 @@ import { checkAuth, deleteBunny, getFamilies, logout } from '../fetch-utils.js';
 
 checkAuth();
 
-const familiesEl = document.querySelector('.families-container');
 const logoutButton = document.getElementById('logout');
 
 logoutButton.addEventListener('click', () => {

@@ -12,7 +12,6 @@ form.addEventListener('submit', async (e) => {
 
     await createBunny({ 
         name: bunnyForm.get('bunny-name'),
-        
         family_id: bunnyForm.get('family-id'),
     });
     form.reset();
